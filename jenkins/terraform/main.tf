@@ -24,7 +24,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0d97ef13c06b05a19"
   instance_type = "t2.micro"
   user_data = data.template_file.user_data.rendered
-  key_name = "ssh_Grilly"
+  key_name = "ssh_Grilly2"
   security_groups = [aws_security_group.allow_tls.name]
   associate_public_ip_address = true
 
