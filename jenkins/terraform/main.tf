@@ -38,7 +38,7 @@ resource "aws_instance" "app_server" {
 
 resource "aws_key_pair" "deployer" {
   key_name = "deployer-keys-authiat"
-  public_key = file("./ssh/id_rsa.pub")
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEVLkgbIbcYQElcrSgt2tZDcjxlnGAjUjrM4iseFod9P jordangrilly@gmail.com"
 }
 
 resource "aws_security_group" "allow_tls" {
