@@ -29,7 +29,7 @@ resource "aws_instance" "app_server" {
   associate_public_ip_address = true
 
   tags = {
-    Name = var.instance_name
+    Name = "app"
     groups = "app"
     owner  = "Grilly-Jordan"
   }
