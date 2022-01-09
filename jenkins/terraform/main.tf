@@ -24,7 +24,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0d97ef13c06b05a19"
   instance_type = "t2.micro"
   user_data = data.template_file.user_data.rendered
-  key_name = "ssh_Grilly2"
+  key_name = "ssh_Grilly"
   security_groups = [aws_security_group.allow_tls.name]
   associate_public_ip_address = true
 
@@ -37,7 +37,7 @@ resource "aws_instance" "app_server" {
 
 
 resource "aws_key_pair" "deployer" {
-  key_name = "deployer-keys-authiat"
+  key_name = "ssh_Grilly"
   public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEVLkgbIbcYQElcrSgt2tZDcjxlnGAjUjrM4iseFod9P jordangrilly@gmail.com"
 }
 
