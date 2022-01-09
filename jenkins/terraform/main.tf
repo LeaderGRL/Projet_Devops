@@ -10,7 +10,7 @@ terraform {
 }
 
 data "template_file" "user_data" {
-  template = file("add-ssh-web-app.yaml")
+  template = file("terraform.yaml")
 }
 
 provider "aws" {
